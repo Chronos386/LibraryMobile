@@ -25,18 +25,4 @@ class AuthInteractorImpl implements AuthInteractor {
       return Error(LocaleKeys.failure.tr());
     }
   }
-
-  @override
-  Future<Result<bool>> exitFromAccount(String key) async {
-    Result<bool> result = await authRepo.exitFromAccount(key);
-    if (result is Success<bool>) {
-      bool data = result.data;
-      return Success(data);
-    } else if (result is Error<bool>) {
-      String error = result.errorCode;
-      return Error(error);
-    } else {
-      return Error(LocaleKeys.failure.tr());
-    }
-  }
 }

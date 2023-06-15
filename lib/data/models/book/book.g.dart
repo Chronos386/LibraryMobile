@@ -7,23 +7,22 @@ part of 'book.dart';
 // **************************************************************************
 
 _$_DataBook _$$_DataBookFromJson(Map<String, dynamic> json) => _$_DataBook(
+      id: json['id'] as int,
       name: json['name'] as String,
       description: json['description'] as String,
-      x_pos: (json['x_pos'] as num).toDouble(),
-      y_pos: (json['y_pos'] as num).toDouble(),
-      author: DataAuthor.fromJson(json['author'] as Map<String, dynamic>),
-      genre: DataGenre.fromJson(json['genre'] as Map<String, dynamic>),
-      photos:
-          (json['photos'] as List<dynamic>).map((e) => e as String).toList(),
+      rack_id: json['rack_id'] as int,
+      auth_id: json['auth_id'] as int,
+      genre_id: json['genre_id'] as int,
+      photo: json['photo'] as String,
     );
 
 Map<String, dynamic> _$$_DataBookToJson(_$_DataBook instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'name': instance.name,
       'description': instance.description,
-      'x_pos': instance.x_pos,
-      'y_pos': instance.y_pos,
-      'author': instance.author,
-      'genre': instance.genre,
-      'photos': instance.photos,
+      'rack_id': instance.rack_id,
+      'auth_id': instance.auth_id,
+      'genre_id': instance.genre_id,
+      'photo': instance.photo,
     };

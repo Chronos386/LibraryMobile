@@ -8,16 +8,12 @@ part of 'author.dart';
 
 _$_DataAuthor _$$_DataAuthorFromJson(Map<String, dynamic> json) =>
     _$_DataAuthor(
-      id: json['id'] as int,
-      name: json['name'] as String,
-      surname: json['surname'] as String,
-      patronymic: json['patronymic'] as String,
+      id_auth: json['id_auth'] as int,
+      full_name: json['full_name'] as String,
     );
 
 Map<String, dynamic> _$$_DataAuthorToJson(_$_DataAuthor instance) =>
     <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'surname': instance.surname,
-      'patronymic': instance.patronymic,
+      'id_auth': instance.id_auth,
+      'full_name': instance.full_name,
     };

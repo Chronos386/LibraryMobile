@@ -20,7 +20,6 @@ DataPerson _$DataPersonFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DataPerson {
-  String get login => throw _privateConstructorUsedError;
   String get key => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +34,7 @@ abstract class $DataPersonCopyWith<$Res> {
           DataPerson value, $Res Function(DataPerson) then) =
       _$DataPersonCopyWithImpl<$Res, DataPerson>;
   @useResult
-  $Res call({String login, String key});
+  $Res call({String key});
 }
 
 /// @nodoc
@@ -51,14 +50,9 @@ class _$DataPersonCopyWithImpl<$Res, $Val extends DataPerson>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? login = null,
     Object? key = null,
   }) {
     return _then(_value.copyWith(
-      login: null == login
-          ? _value.login
-          : login // ignore: cast_nullable_to_non_nullable
-              as String,
       key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
@@ -75,7 +69,7 @@ abstract class _$$_DataPersonCopyWith<$Res>
       __$$_DataPersonCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String login, String key});
+  $Res call({String key});
 }
 
 /// @nodoc
@@ -89,14 +83,9 @@ class __$$_DataPersonCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? login = null,
     Object? key = null,
   }) {
     return _then(_$_DataPerson(
-      login: null == login
-          ? _value.login
-          : login // ignore: cast_nullable_to_non_nullable
-              as String,
       key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
@@ -108,19 +97,17 @@ class __$$_DataPersonCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataPerson implements _DataPerson {
-  const _$_DataPerson({required this.login, required this.key});
+  const _$_DataPerson({required this.key});
 
   factory _$_DataPerson.fromJson(Map<String, dynamic> json) =>
       _$$_DataPersonFromJson(json);
 
   @override
-  final String login;
-  @override
   final String key;
 
   @override
   String toString() {
-    return 'DataPerson(login: $login, key: $key)';
+    return 'DataPerson(key: $key)';
   }
 
   @override
@@ -128,13 +115,12 @@ class _$_DataPerson implements _DataPerson {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DataPerson &&
-            (identical(other.login, login) || other.login == login) &&
             (identical(other.key, key) || other.key == key));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, login, key);
+  int get hashCode => Object.hash(runtimeType, key);
 
   @JsonKey(ignore: true)
   @override
@@ -151,14 +137,11 @@ class _$_DataPerson implements _DataPerson {
 }
 
 abstract class _DataPerson implements DataPerson {
-  const factory _DataPerson(
-      {required final String login, required final String key}) = _$_DataPerson;
+  const factory _DataPerson({required final String key}) = _$_DataPerson;
 
   factory _DataPerson.fromJson(Map<String, dynamic> json) =
       _$_DataPerson.fromJson;
 
-  @override
-  String get login;
   @override
   String get key;
   @override

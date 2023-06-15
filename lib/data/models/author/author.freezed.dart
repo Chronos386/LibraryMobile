@@ -20,10 +20,8 @@ DataAuthor _$DataAuthorFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DataAuthor {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String get surname => throw _privateConstructorUsedError;
-  String get patronymic => throw _privateConstructorUsedError;
+  int get id_auth => throw _privateConstructorUsedError;
+  String get full_name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +35,7 @@ abstract class $DataAuthorCopyWith<$Res> {
           DataAuthor value, $Res Function(DataAuthor) then) =
       _$DataAuthorCopyWithImpl<$Res, DataAuthor>;
   @useResult
-  $Res call({int id, String name, String surname, String patronymic});
+  $Res call({int id_auth, String full_name});
 }
 
 /// @nodoc
@@ -53,27 +51,17 @@ class _$DataAuthorCopyWithImpl<$Res, $Val extends DataAuthor>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? surname = null,
-    Object? patronymic = null,
+    Object? id_auth = null,
+    Object? full_name = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      id_auth: null == id_auth
+          ? _value.id_auth
+          : id_auth // ignore: cast_nullable_to_non_nullable
               as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      surname: null == surname
-          ? _value.surname
-          : surname // ignore: cast_nullable_to_non_nullable
-              as String,
-      patronymic: null == patronymic
-          ? _value.patronymic
-          : patronymic // ignore: cast_nullable_to_non_nullable
+      full_name: null == full_name
+          ? _value.full_name
+          : full_name // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -87,7 +75,7 @@ abstract class _$$_DataAuthorCopyWith<$Res>
       __$$_DataAuthorCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, String name, String surname, String patronymic});
+  $Res call({int id_auth, String full_name});
 }
 
 /// @nodoc
@@ -101,27 +89,17 @@ class __$$_DataAuthorCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? surname = null,
-    Object? patronymic = null,
+    Object? id_auth = null,
+    Object? full_name = null,
   }) {
     return _then(_$_DataAuthor(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      id_auth: null == id_auth
+          ? _value.id_auth
+          : id_auth // ignore: cast_nullable_to_non_nullable
               as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      surname: null == surname
-          ? _value.surname
-          : surname // ignore: cast_nullable_to_non_nullable
-              as String,
-      patronymic: null == patronymic
-          ? _value.patronymic
-          : patronymic // ignore: cast_nullable_to_non_nullable
+      full_name: null == full_name
+          ? _value.full_name
+          : full_name // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -130,27 +108,19 @@ class __$$_DataAuthorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataAuthor implements _DataAuthor {
-  const _$_DataAuthor(
-      {required this.id,
-      required this.name,
-      required this.surname,
-      required this.patronymic});
+  const _$_DataAuthor({required this.id_auth, required this.full_name});
 
   factory _$_DataAuthor.fromJson(Map<String, dynamic> json) =>
       _$$_DataAuthorFromJson(json);
 
   @override
-  final int id;
+  final int id_auth;
   @override
-  final String name;
-  @override
-  final String surname;
-  @override
-  final String patronymic;
+  final String full_name;
 
   @override
   String toString() {
-    return 'DataAuthor(id: $id, name: $name, surname: $surname, patronymic: $patronymic)';
+    return 'DataAuthor(id_auth: $id_auth, full_name: $full_name)';
   }
 
   @override
@@ -158,16 +128,14 @@ class _$_DataAuthor implements _DataAuthor {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DataAuthor &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.surname, surname) || other.surname == surname) &&
-            (identical(other.patronymic, patronymic) ||
-                other.patronymic == patronymic));
+            (identical(other.id_auth, id_auth) || other.id_auth == id_auth) &&
+            (identical(other.full_name, full_name) ||
+                other.full_name == full_name));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, surname, patronymic);
+  int get hashCode => Object.hash(runtimeType, id_auth, full_name);
 
   @JsonKey(ignore: true)
   @override
@@ -185,22 +153,16 @@ class _$_DataAuthor implements _DataAuthor {
 
 abstract class _DataAuthor implements DataAuthor {
   const factory _DataAuthor(
-      {required final int id,
-      required final String name,
-      required final String surname,
-      required final String patronymic}) = _$_DataAuthor;
+      {required final int id_auth,
+      required final String full_name}) = _$_DataAuthor;
 
   factory _DataAuthor.fromJson(Map<String, dynamic> json) =
       _$_DataAuthor.fromJson;
 
   @override
-  int get id;
+  int get id_auth;
   @override
-  String get name;
-  @override
-  String get surname;
-  @override
-  String get patronymic;
+  String get full_name;
   @override
   @JsonKey(ignore: true)
   _$$_DataAuthorCopyWith<_$_DataAuthor> get copyWith =>

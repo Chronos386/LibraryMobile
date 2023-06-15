@@ -1,17 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'person.dart';
+part of 'pict_id.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DataPerson _$$_DataPersonFromJson(Map<String, dynamic> json) =>
-    _$_DataPerson(
-      key: json['key'] as String,
+_$_DataPictId _$$_DataPictIdFromJson(Map<String, dynamic> json) =>
+    _$_DataPictId(
+      id: json['id'] as int,
     );
 
-Map<String, dynamic> _$$_DataPersonToJson(_$_DataPerson instance) =>
+Map<String, dynamic> _$$_DataPictIdToJson(_$_DataPictId instance) =>
     <String, dynamic>{
-      'key': instance.key,
+      'id': instance.id,
     };

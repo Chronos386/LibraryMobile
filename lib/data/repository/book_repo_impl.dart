@@ -11,10 +11,4 @@ class BookRepositoryImpl implements BookRepository {
   Future<Result<bool>> createNewBook(DataBook book) async {
     return await networkStore.createNewBook(book);
   }
-
-  @override
-  Future<Result<List<DataBook>>> getFilteredBooks(String substring, int genreID,
-      int authorID) async {
-    return await networkStore.getFilteredBooks(substring, genreID, authorID);
-  }
 }

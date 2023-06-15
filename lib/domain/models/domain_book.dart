@@ -1,72 +1,70 @@
 import 'package:nasty_project/data/models/book/book.dart';
-import 'package:nasty_project/domain/models/domain_genre.dart';
-import 'package:nasty_project/domain/models/domain_author.dart';
 import 'package:nasty_project/presentation/models/presentation_book.dart';
 
 class DomainBook {
+  final int id;
   final String name;
   final String description;
-  final double xPos;
-  final double yPos;
-  final DomainAuthor author;
-  final DomainGenre genre;
-  final List<String> photos;
+  final int rackId;
+  final int authId;
+  final int genreId;
+  final String photo;
 
   DomainBook({
+    required this.id,
     required this.name,
     required this.description,
-    required this.xPos,
-    required this.yPos,
-    required this.author,
-    required this.genre,
-    required this.photos,
+    required this.rackId,
+    required this.authId,
+    required this.genreId,
+    required this.photo,
   });
 
   factory DomainBook.fromData(DataBook data) {
     return DomainBook(
+      id: data.id,
       name: data.name,
       description: data.description,
-      xPos: data.x_pos,
-      yPos: data.y_pos,
-      author: DomainAuthor.fromData(data.author),
-      genre: DomainGenre.fromData(data.genre),
-      photos: data.photos,
+      rackId: data.rack_id,
+      authId: data.auth_id,
+      genreId: data.genre_id,
+      photo: data.photo,
     );
   }
 
   factory DomainBook.fromPress(PressBook press) {
     return DomainBook(
+      id: press.id,
       name: press.name,
       description: press.description,
-      xPos: press.xPos,
-      yPos: press.yPos,
-      author: DomainAuthor.fromPress(press.author),
-      genre: DomainGenre.fromPress(press.genre),
-      photos: press.photos,
+      rackId: press.rackId,
+      authId: press.authId,
+      genreId: press.genreId,
+      photo: press.photo,
     );
   }
 
   PressBook toPress() {
     return PressBook(
+      id: id,
       name: name,
       description: description,
-      xPos: xPos,
-      yPos: yPos,
-      author: author.toPress(),
-      genre: genre.toPress(),
-      photos: photos,
+      rackId: rackId,
+      authId: authId,
+      genreId: genreId,
+      photo: photo,
     );
   }
 
   DataBook toData() {
     return DataBook(
+      id: id,
       name: name,
       description: description,
-      x_pos: xPos,
-      y_pos: yPos,
-      author: author.toData(),
-      genre: genre.toData(),
-      photos: photos,
+      rack_id: rackId,
+      auth_id: authId,
+      genre_id: genreId,
+      photo: photo,
     );
   }
 }

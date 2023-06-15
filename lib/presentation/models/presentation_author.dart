@@ -1,13 +1,9 @@
 class PressAuthor {
   final int id;
-  final String name;
-  final String surname;
-  final String patronymic;
+  final String fullName;
 
   PressAuthor({
     required this.id,
-    required this.name,
-    required this.surname,
-    required this.patronymic,
+    required this.fullName
   });
 }

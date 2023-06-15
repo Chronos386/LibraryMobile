@@ -20,7 +20,7 @@ DataGenre _$DataGenreFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DataGenre {
-  int get id => throw _privateConstructorUsedError;
+  int get id_genre => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -34,7 +34,7 @@ abstract class $DataGenreCopyWith<$Res> {
   factory $DataGenreCopyWith(DataGenre value, $Res Function(DataGenre) then) =
       _$DataGenreCopyWithImpl<$Res, DataGenre>;
   @useResult
-  $Res call({int id, String name});
+  $Res call({int id_genre, String name});
 }
 
 /// @nodoc
@@ -50,13 +50,13 @@ class _$DataGenreCopyWithImpl<$Res, $Val extends DataGenre>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id_genre = null,
     Object? name = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      id_genre: null == id_genre
+          ? _value.id_genre
+          : id_genre // ignore: cast_nullable_to_non_nullable
               as int,
       name: null == name
           ? _value.name
@@ -73,7 +73,7 @@ abstract class _$$_DataGenreCopyWith<$Res> implements $DataGenreCopyWith<$Res> {
       __$$_DataGenreCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, String name});
+  $Res call({int id_genre, String name});
 }
 
 /// @nodoc
@@ -87,13 +87,13 @@ class __$$_DataGenreCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id_genre = null,
     Object? name = null,
   }) {
     return _then(_$_DataGenre(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      id_genre: null == id_genre
+          ? _value.id_genre
+          : id_genre // ignore: cast_nullable_to_non_nullable
               as int,
       name: null == name
           ? _value.name
@@ -106,19 +106,19 @@ class __$$_DataGenreCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataGenre implements _DataGenre {
-  const _$_DataGenre({required this.id, required this.name});
+  const _$_DataGenre({required this.id_genre, required this.name});
 
   factory _$_DataGenre.fromJson(Map<String, dynamic> json) =>
       _$$_DataGenreFromJson(json);
 
   @override
-  final int id;
+  final int id_genre;
   @override
   final String name;
 
   @override
   String toString() {
-    return 'DataGenre(id: $id, name: $name)';
+    return 'DataGenre(id_genre: $id_genre, name: $name)';
   }
 
   @override
@@ -126,13 +126,14 @@ class _$_DataGenre implements _DataGenre {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DataGenre &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.id_genre, id_genre) ||
+                other.id_genre == id_genre) &&
             (identical(other.name, name) || other.name == name));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name);
+  int get hashCode => Object.hash(runtimeType, id_genre, name);
 
   @JsonKey(ignore: true)
   @override
@@ -150,13 +151,13 @@ class _$_DataGenre implements _DataGenre {
 
 abstract class _DataGenre implements DataGenre {
   const factory _DataGenre(
-      {required final int id, required final String name}) = _$_DataGenre;
+      {required final int id_genre, required final String name}) = _$_DataGenre;
 
   factory _DataGenre.fromJson(Map<String, dynamic> json) =
       _$_DataGenre.fromJson;
 
   @override
-  int get id;
+  int get id_genre;
   @override
   String get name;
   @override

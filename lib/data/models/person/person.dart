@@ -5,7 +5,6 @@ part 'person.g.dart';
 @freezed
 class DataPerson with _$DataPerson {
   const factory DataPerson({
-    required String login,
     required String key,
   }) = _DataPerson;
 

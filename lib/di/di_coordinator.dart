@@ -10,11 +10,14 @@ import '../data/storage/network_storage_impl.dart';
 import '../domain/interactors/auth_interactor_impl.dart';
 import '../domain/interactors/book_interactor_impl.dart';
 import '../domain/interactors/data_interactor_impl.dart';
+import '../domain/interactors/route_interactor_impl.dart';
 import '../presentation/interactors/auth_interactor.dart';
 import '../presentation/interactors/book_interactor.dart';
 import '../presentation/interactors/data_interactor.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:nasty_project/domain/repository/route_repo.dart';
+import 'package:nasty_project/data/repository/route_repo_impl.dart';
+import 'package:nasty_project/presentation/interactors/route_interactor.dart';
 
 final get = GetIt.instance;
 
@@ -26,7 +29,9 @@ void setupGetIt() {
   get.registerFactory<DataRepository>(() => DataRepositoryImpl());
   get.registerFactory<BookRepository>(() => BookRepositoryImpl());
   get.registerFactory<AuthRepository>(() => AuthRepositoryImpl());
+  get.registerFactory<RouteRepository>(() => RouteRepositoryImpl());
   get.registerFactory<AuthInteractor>(() => AuthInteractorImpl());
   get.registerFactory<BookInteractor>(() => BookInteractorImpl());
   get.registerFactory<DataInteractor>(() => DataInteractorImpl());
+  get.registerFactory<RouteInteractor>(() => RouteInteractorImpl());
 }

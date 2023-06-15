@@ -11,7 +11,7 @@ class DomainGenre {
   });
 
   factory DomainGenre.fromData(DataGenre data) {
-    return DomainGenre(id: data.id, name: data.name);
+    return DomainGenre(id: data.id_genre, name: data.name);
   }
 
   factory DomainGenre.fromPress(PressGenre data) {
@@ -23,6 +23,6 @@ class DomainGenre {
   }
 
   DataGenre toData() {
-    return DataGenre(id: id, name: name);
+    return DataGenre(id_genre: id, name: name);
   }
 }

@@ -20,13 +20,13 @@ DataBook _$DataBookFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DataBook {
+  int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
-  double get x_pos => throw _privateConstructorUsedError;
-  double get y_pos => throw _privateConstructorUsedError;
-  DataAuthor get author => throw _privateConstructorUsedError;
-  DataGenre get genre => throw _privateConstructorUsedError;
-  List<String> get photos => throw _privateConstructorUsedError;
+  int get rack_id => throw _privateConstructorUsedError;
+  int get auth_id => throw _privateConstructorUsedError;
+  int get genre_id => throw _privateConstructorUsedError;
+  String get photo => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,16 +40,13 @@ abstract class $DataBookCopyWith<$Res> {
       _$DataBookCopyWithImpl<$Res, DataBook>;
   @useResult
   $Res call(
-      {String name,
+      {int id,
+      String name,
       String description,
-      double x_pos,
-      double y_pos,
-      DataAuthor author,
-      DataGenre genre,
-      List<String> photos});
-
-  $DataAuthorCopyWith<$Res> get author;
-  $DataGenreCopyWith<$Res> get genre;
+      int rack_id,
+      int auth_id,
+      int genre_id,
+      String photo});
 }
 
 /// @nodoc
@@ -65,15 +62,19 @@ class _$DataBookCopyWithImpl<$Res, $Val extends DataBook>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? description = null,
-    Object? x_pos = null,
-    Object? y_pos = null,
-    Object? author = null,
-    Object? genre = null,
-    Object? photos = null,
+    Object? rack_id = null,
+    Object? auth_id = null,
+    Object? genre_id = null,
+    Object? photo = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -82,43 +83,23 @@ class _$DataBookCopyWithImpl<$Res, $Val extends DataBook>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      x_pos: null == x_pos
-          ? _value.x_pos
-          : x_pos // ignore: cast_nullable_to_non_nullable
-              as double,
-      y_pos: null == y_pos
-          ? _value.y_pos
-          : y_pos // ignore: cast_nullable_to_non_nullable
-              as double,
-      author: null == author
-          ? _value.author
-          : author // ignore: cast_nullable_to_non_nullable
-              as DataAuthor,
-      genre: null == genre
-          ? _value.genre
-          : genre // ignore: cast_nullable_to_non_nullable
-              as DataGenre,
-      photos: null == photos
-          ? _value.photos
-          : photos // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      rack_id: null == rack_id
+          ? _value.rack_id
+          : rack_id // ignore: cast_nullable_to_non_nullable
+              as int,
+      auth_id: null == auth_id
+          ? _value.auth_id
+          : auth_id // ignore: cast_nullable_to_non_nullable
+              as int,
+      genre_id: null == genre_id
+          ? _value.genre_id
+          : genre_id // ignore: cast_nullable_to_non_nullable
+              as int,
+      photo: null == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DataAuthorCopyWith<$Res> get author {
-    return $DataAuthorCopyWith<$Res>(_value.author, (value) {
-      return _then(_value.copyWith(author: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DataGenreCopyWith<$Res> get genre {
-    return $DataGenreCopyWith<$Res>(_value.genre, (value) {
-      return _then(_value.copyWith(genre: value) as $Val);
-    });
   }
 }
 
@@ -130,18 +111,13 @@ abstract class _$$_DataBookCopyWith<$Res> implements $DataBookCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String name,
+      {int id,
+      String name,
       String description,
-      double x_pos,
-      double y_pos,
-      DataAuthor author,
-      DataGenre genre,
-      List<String> photos});
-
-  @override
-  $DataAuthorCopyWith<$Res> get author;
-  @override
-  $DataGenreCopyWith<$Res> get genre;
+      int rack_id,
+      int auth_id,
+      int genre_id,
+      String photo});
 }
 
 /// @nodoc
@@ -155,15 +131,19 @@ class __$$_DataBookCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? description = null,
-    Object? x_pos = null,
-    Object? y_pos = null,
-    Object? author = null,
-    Object? genre = null,
-    Object? photos = null,
+    Object? rack_id = null,
+    Object? auth_id = null,
+    Object? genre_id = null,
+    Object? photo = null,
   }) {
     return _then(_$_DataBook(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -172,26 +152,22 @@ class __$$_DataBookCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      x_pos: null == x_pos
-          ? _value.x_pos
-          : x_pos // ignore: cast_nullable_to_non_nullable
-              as double,
-      y_pos: null == y_pos
-          ? _value.y_pos
-          : y_pos // ignore: cast_nullable_to_non_nullable
-              as double,
-      author: null == author
-          ? _value.author
-          : author // ignore: cast_nullable_to_non_nullable
-              as DataAuthor,
-      genre: null == genre
-          ? _value.genre
-          : genre // ignore: cast_nullable_to_non_nullable
-              as DataGenre,
-      photos: null == photos
-          ? _value._photos
-          : photos // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      rack_id: null == rack_id
+          ? _value.rack_id
+          : rack_id // ignore: cast_nullable_to_non_nullable
+              as int,
+      auth_id: null == auth_id
+          ? _value.auth_id
+          : auth_id // ignore: cast_nullable_to_non_nullable
+              as int,
+      genre_id: null == genre_id
+          ? _value.genre_id
+          : genre_id // ignore: cast_nullable_to_non_nullable
+              as int,
+      photo: null == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -200,41 +176,35 @@ class __$$_DataBookCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DataBook implements _DataBook {
   const _$_DataBook(
-      {required this.name,
+      {required this.id,
+      required this.name,
       required this.description,
-      required this.x_pos,
-      required this.y_pos,
-      required this.author,
-      required this.genre,
-      required final List<String> photos})
-      : _photos = photos;
+      required this.rack_id,
+      required this.auth_id,
+      required this.genre_id,
+      required this.photo});
 
   factory _$_DataBook.fromJson(Map<String, dynamic> json) =>
       _$$_DataBookFromJson(json);
 
   @override
+  final int id;
+  @override
   final String name;
   @override
   final String description;
   @override
-  final double x_pos;
+  final int rack_id;
   @override
-  final double y_pos;
+  final int auth_id;
   @override
-  final DataAuthor author;
+  final int genre_id;
   @override
-  final DataGenre genre;
-  final List<String> _photos;
-  @override
-  List<String> get photos {
-    if (_photos is EqualUnmodifiableListView) return _photos;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_photos);
-  }
+  final String photo;
 
   @override
   String toString() {
-    return 'DataBook(name: $name, description: $description, x_pos: $x_pos, y_pos: $y_pos, author: $author, genre: $genre, photos: $photos)';
+    return 'DataBook(id: $id, name: $name, description: $description, rack_id: $rack_id, auth_id: $auth_id, genre_id: $genre_id, photo: $photo)';
   }
 
   @override
@@ -242,20 +212,21 @@ class _$_DataBook implements _DataBook {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DataBook &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.x_pos, x_pos) || other.x_pos == x_pos) &&
-            (identical(other.y_pos, y_pos) || other.y_pos == y_pos) &&
-            (identical(other.author, author) || other.author == author) &&
-            (identical(other.genre, genre) || other.genre == genre) &&
-            const DeepCollectionEquality().equals(other._photos, _photos));
+            (identical(other.rack_id, rack_id) || other.rack_id == rack_id) &&
+            (identical(other.auth_id, auth_id) || other.auth_id == auth_id) &&
+            (identical(other.genre_id, genre_id) ||
+                other.genre_id == genre_id) &&
+            (identical(other.photo, photo) || other.photo == photo));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, description, x_pos, y_pos,
-      author, genre, const DeepCollectionEquality().hash(_photos));
+  int get hashCode => Object.hash(
+      runtimeType, id, name, description, rack_id, auth_id, genre_id, photo);
 
   @JsonKey(ignore: true)
   @override
@@ -273,30 +244,30 @@ class _$_DataBook implements _DataBook {
 
 abstract class _DataBook implements DataBook {
   const factory _DataBook(
-      {required final String name,
+      {required final int id,
+      required final String name,
       required final String description,
-      required final double x_pos,
-      required final double y_pos,
-      required final DataAuthor author,
-      required final DataGenre genre,
-      required final List<String> photos}) = _$_DataBook;
+      required final int rack_id,
+      required final int auth_id,
+      required final int genre_id,
+      required final String photo}) = _$_DataBook;
 
   factory _DataBook.fromJson(Map<String, dynamic> json) = _$_DataBook.fromJson;
 
+  @override
+  int get id;
   @override
   String get name;
   @override
   String get description;
   @override
-  double get x_pos;
+  int get rack_id;
   @override
-  double get y_pos;
+  int get auth_id;
   @override
-  DataAuthor get author;
+  int get genre_id;
   @override
-  DataGenre get genre;
-  @override
-  List<String> get photos;
+  String get photo;
   @override
   @JsonKey(ignore: true)
   _$$_DataBookCopyWith<_$_DataBook> get copyWith =>

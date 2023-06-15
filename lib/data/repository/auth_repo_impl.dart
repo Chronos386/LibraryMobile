@@ -13,9 +13,4 @@ class AuthRepositoryImpl implements AuthRepository {
   {
     return await networkStore.enterToAccount(login, password);
   }
-
-  @override
-  Future<Result<bool>> exitFromAccount(String key) async {
-    return await networkStore.exitFromAccount(key);
-  }
 }
